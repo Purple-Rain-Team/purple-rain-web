@@ -57,3 +57,34 @@ export const getRouteAuthority = (path, routeData) => {
   });
   return authorities;
 };
+
+export const store = {
+  save: (name, value, type = 'localtorage') => {
+    if ((type || '').toLocaleLowerCase() === 'localstorage') {
+      localStorage.setItem(name, JSON.stringify(value));
+    } else if ((type || '').toLocaleLowerCase() === 'sessionstorage') {
+      sessionStorage.setItem(name, JSON.stringify(value));
+    }
+  },
+  get: (name, type = 'localStorage') => {
+    if ((type || '').toLocaleLowerCase() === 'localstorage') {
+      return JSON.parse(localStorage.getItem(name) || '{}');
+    } else if ((type || '').toLocaleLowerCase() === 'sessionstorage') {
+      return JSON.parse(sessionStorage.getItem(name) || '{}');
+    }
+  },
+};
+
+export const filterObject = (obj) => {
+  if (!(typeof obj == 'object')) {
+    return;
+  }
+
+  for ( const key in obj) {
+    if (obj.hasOwnProperty(key)
+      && (obj[key] == null || obj[key] == undefined || obj[key] === '')) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}

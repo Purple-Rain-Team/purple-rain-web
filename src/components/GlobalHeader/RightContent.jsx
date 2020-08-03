@@ -1,5 +1,5 @@
 import { Tooltip, Tag } from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, GithubOutlined, WeiboOutlined, InstagramOutlined } from '@ant-design/icons';
 import React from 'react';
 import { connect, SelectLang } from 'umi';
 import Avatar from './AvatarDropdown';
@@ -22,7 +22,7 @@ const GlobalHeaderRight = props => {
 
   return (
     <div className={className}>
-      <HeaderSearch
+      {/* <HeaderSearch
         className={`${styles.action} ${styles.search}`}
         placeholder="站内搜索"
         defaultValue="umi ui"
@@ -46,27 +46,29 @@ const GlobalHeaderRight = props => {
         ]} // onSearch={value => {
         //   //console.log('input', value);
         // }}
-      />
-      <Tooltip title="使用文档">
-        <a
-          style={{
-            color: 'inherit',
-          }}
-          target="_blank"
-          href="https://pro.ant.design/docs/getting-started"
-          rel="noopener noreferrer"
-          className={styles.action}
-        >
-          <QuestionCircleOutlined />
-        </a>
-      </Tooltip>
-      <Avatar />
+      /> */}
+      {/* <Avatar />
       {REACT_APP_ENV && (
         <span>
           <Tag color={ENVTagColor[REACT_APP_ENV]}>{REACT_APP_ENV}</Tag>
         </span>
       )}
-      <SelectLang className={styles.action} />
+      <SelectLang className={styles.action} /> */}
+      <a href="https://github.com/Locusc/exclusive-utils" target="_blank">
+        <Tooltip title={"Github"}>
+          <GithubOutlined className={styles.action} />  
+        </Tooltip>
+      </a>
+      <a href="https://weibo.com/u/3302990745?topnav=1&wvr=6&topsug=1&is_all=1" target="_blank">
+        <Tooltip title={"Weibo"}>
+          <WeiboOutlined className={styles.action} />
+        </Tooltip>
+      </a>
+      <a href="https://www.blog.locusc.cn" target="_blank">
+        <Tooltip title={"个人博客"}>
+          <InstagramOutlined className={styles.action} />
+        </Tooltip>
+      </a>
     </div>
   );
 };

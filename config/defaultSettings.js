@@ -1,17 +1,18 @@
 const proSettings = {
-  navTheme: 'dark',
+  navTheme: 'light',
   // 拂晓蓝
-  primaryColor: '#1890ff',
+  primaryColor: '#975AFF',
   layout: 'top',
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
+  footerRender: false,
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: 'Purple-Rain Office',
   pwa: false,
-  iconfontUrl: '',
+  iconfontUrl: '//at.alicdn.com/t/font_1973222_6795s51ftxy.js',
 };
 export default proSettings;
