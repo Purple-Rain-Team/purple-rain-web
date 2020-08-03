@@ -27,7 +27,7 @@ export default [
             path: '/index',
             name: 'News',
             icon: 'icon-ziyuan1',
-            component: './Welcome',
+            component: './TestPage',
           },
           {
             path: '/test',
@@ -38,7 +38,7 @@ export default [
           {
             path: '/admin',
             name: 'Yeezy Release',
-            icon: 'crown',
+            icon: 'icon-yeezy',
             component: './Admin',
             // authority: ['admin'],
             // routes: [
@@ -53,8 +53,14 @@ export default [
           },
           {
             name: 'Nike Release',
-            icon: 'table',
+            icon: 'icon-AJ-',
             path: '/list',
+            component: './ListTableList',
+          },
+          {
+            name: 'Sponsors',
+            icon: 'icon-hezuohuoban',
+            path: '/sponsors',
             component: './ListTableList',
           },
           {

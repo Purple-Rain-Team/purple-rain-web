@@ -1,5 +1,5 @@
 import { Tooltip, Tag } from 'antd';
-import { QuestionCircleOutlined, GithubOutlined, WeiboOutlined, InstagramOutlined } from '@ant-design/icons';
+import { WechatOutlined, WeiboOutlined, PhoneOutlined } from '@ant-design/icons';
 import React from 'react';
 import { connect, SelectLang } from 'umi';
 import Avatar from './AvatarDropdown';
@@ -55,18 +55,18 @@ const GlobalHeaderRight = props => {
       )}
       <SelectLang className={styles.action} /> */}
       <a href="https://github.com/Locusc/exclusive-utils" target="_blank">
-        <Tooltip title={"Github"}>
-          <GithubOutlined className={styles.action} />  
+        <Tooltip title={"微信公众号"} placement={'bottomRight'}>
+          <WechatOutlined className={styles.action} />
         </Tooltip>
       </a>
       <a href="https://weibo.com/u/3302990745?topnav=1&wvr=6&topsug=1&is_all=1" target="_blank">
-        <Tooltip title={"Weibo"}>
+        <Tooltip title={"官方微博"} placement={'bottomRight'}>
           <WeiboOutlined className={styles.action} />
         </Tooltip>
       </a>
       <a href="https://www.blog.locusc.cn" target="_blank">
-        <Tooltip title={"个人博客"}>
-          <InstagramOutlined className={styles.action} />
+        <Tooltip title={"联系我们 | 商业合作"} placement={'bottomRight'}>
+          <PhoneOutlined className={styles.action} />
         </Tooltip>
       </a>
     </div>

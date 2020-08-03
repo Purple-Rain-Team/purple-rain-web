@@ -13,6 +13,6 @@ const proSettings = {
   },
   title: 'Purple-Rain Office',
   pwa: false,
-  iconfontUrl: '//at.alicdn.com/t/font_1973222_6795s51ftxy.js',
+  iconfontUrl: '//at.alicdn.com/t/font_1973222_2iqa8wy85qj.js',
 };
 export default proSettings;
