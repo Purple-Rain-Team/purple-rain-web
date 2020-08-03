@@ -27,7 +27,7 @@ export default [
             path: '/index',
             name: 'News',
             icon: 'icon-ziyuan1',
-            component: './TestPage',
+            component: './News',
           },
           {
             path: '/test',
